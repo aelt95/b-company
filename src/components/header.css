@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 2rem;
+}
+header {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100svh;
+}
+.nav-bar {
+  /* position: absolute; */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(219, 50, 77, 0.2);
+}
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-bar li {
+  cursor: pointer;
+  font-size: 22px;
+}
+.nav-bar li:hover {
+  color: #db324d;
+  transition: 0.3s;
+}
+.header-section {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.company-content {
+  text-align: center;
+}
+.company-content button {
+  margin-top: 30px;
+  border: none;
+  background-color: #a29c9b;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s linear;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.company-content button:hover {
+  background-color: #a29c9b66;
+}
+.company-name {
+  font-size: 4rem;
+}
+.company-description {
+  font-size: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.static-txt {
+  text-align: end;
+}
+.dynamic-txt {
+  text-align: start;
+  color: #db324d;
+  font-weight: 700;
+}
+
+.images-show {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.image {
+  position: absolute;
+  width: 250px;
+  border-radius: 1rem;
+  width: 95%;
+  height: 400px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.image-1 {
+  object-fit: cover;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: slide 10s infinite;
+}
+.image-2 {
+  object-fit: cover;
+  object-position: top center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes slide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 720px) {
+  .image {
+    height: 300px;
+  }
+}
+@media (max-width: 1100px) {
+  .image {
+    height: 300px;
+  }
+}
+@media (max-width: 720px) {
+  .image {
+    height: 200px;
+  }
+  .nav-bar li {
+    font-size: 18px;
+  }
+  .company-name {
+    font-size: 3rem;
+  }
+  .company-description {
+    font-size: 24px;
+  }
+  .header-section {
+    grid-template-columns: 1fr;
+  }
+}
