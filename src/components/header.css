@@ -63,7 +63,7 @@ header {
   background-color: #a29c9b66;
 }
 .company-name {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .company-description {
   font-size: 36px;
@@ -73,6 +73,7 @@ header {
 }
 .static-txt {
   text-align: end;
+  font-weight: 500;
 }
 .dynamic-txt {
   text-align: start;
@@ -90,7 +91,7 @@ header {
   width: 250px;
   border-radius: 1rem;
   width: 95%;
-  height: 400px;
+  height: 80%;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.4);
 }
 .image-1 {
@@ -120,19 +121,21 @@ header {
     opacity: 1;
   }
 }
-@media (max-width: 720px) {
+
+@media (max-width: 1300px) {
   .image {
-    height: 300px;
+    height: 70%;
+  }
+  .company-name {
+    font-size: 4rem;
+  }
+  .header-section {
+    grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width: 1100px) {
-  .image {
-    height: 300px;
-  }
-}
 @media (max-width: 720px) {
   .image {
-    height: 200px;
+    height: 100%;
   }
   .nav-bar li {
     font-size: 18px;
