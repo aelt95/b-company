@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header>
       <nav className="nav-bar">
-        <span>Logo?</span>
+        <span>SOLIDUS</span>
         <ul>
           <li>About us</li>
           <li>Contact us</li>
@@ -17,7 +17,7 @@ const Header = () => {
       </nav>
       <div className="header-section">
         <div className="company-content">
-          <h1 className="company-name">Company name</h1>
+          <h1 className="company-name">SOLIDUS</h1>
           <div className="company-description">
             <div className="static-txt">We can</div>
             <TypeAnimation

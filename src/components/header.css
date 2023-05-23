@@ -24,6 +24,10 @@ header {
   padding: 1rem 0;
   border-bottom: 1px solid rgb(219, 50, 77, 0.2);
 }
+.nav-bar span {
+  font-size: 22px;
+  font-weight: 500;
+}
 .nav-bar ul {
   display: flex;
   list-style: none;
@@ -64,6 +68,7 @@ header {
 }
 .company-name {
   font-size: 5rem;
+  letter-spacing: 10px;
 }
 .company-description {
   font-size: 36px;
