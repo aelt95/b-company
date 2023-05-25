@@ -1,6 +1,6 @@
 import styles from "./location.css";
 import Image from "next/image";
-import locationImg from "../../public/location.svg";
+import locationImg from "../../../public/location.svg";
 
 function Location() {
   return (

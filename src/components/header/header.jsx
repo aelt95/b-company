@@ -1,8 +1,8 @@
 "use client";
 import styles from "./header.css";
 import Image from "next/image";
-import image1 from "../../public/construction1-unsplash.jpg";
-import image2 from "../../public/construction2-unsplash.jpg";
+import image1 from "../../../public/construction1-unsplash.jpg";
+import image2 from "../../../public/construction2-unsplash.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 const Header = () => {

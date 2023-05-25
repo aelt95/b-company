@@ -1,5 +1,5 @@
 import styles from "./about-us.css";
-import building from "../../public/building.svg";
+import building from "../../../public/building.svg";
 import Image from "next/image";
 
 const AboutUs = () => {
