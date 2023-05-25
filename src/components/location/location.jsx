@@ -2,7 +2,7 @@ import styles from "./location.css";
 import Image from "next/image";
 import locationImg from "../../../public/location.svg";
 
-function Location() {
+const Location = () => {
   return (
     <section className="location">
       <div className="location-information">
@@ -20,6 +20,6 @@ function Location() {
       ></iframe>
     </section>
   );
-}
+};
 
 export default Location;

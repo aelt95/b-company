@@ -7,7 +7,8 @@ import {
   faTrowelBricks,
   faPaintRoller,
 } from "@fortawesome/free-solid-svg-icons";
-function Services() {
+
+const Services = () => {
   return (
     <section className="services-section">
       <div className="services-title">
@@ -57,6 +58,6 @@ function Services() {
       </div>
     </section>
   );
-}
+};
 
 export default Services;

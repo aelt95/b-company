@@ -3,6 +3,7 @@ import Header from "@/components/header/header.jsx";
 import AboutUs from "@/components/about/about-us";
 import Services from "@/components/services/services";
 import Location from "@/components/location/location";
+import ContactUs from "@/components/contactus/contact-us";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutUs></AboutUs>
       <Services />
       <Location />
+      <ContactUs />
     </>
   );
 }

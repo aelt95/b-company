@@ -32,3 +32,12 @@
   border: none;
   border-radius: 8px;
 }
+@media (max-width: 720px) {
+  .location {
+    grid-template-columns: 1fr;
+  }
+  .location-map {
+    height: 90%;
+    width: 100%;
+  }
+}
