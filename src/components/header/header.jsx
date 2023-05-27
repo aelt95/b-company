@@ -11,8 +11,12 @@ const Header = () => {
       <nav className="nav-bar">
         <span>SOLIDUS</span>
         <ul>
-          <li>About us</li>
-          <li>Contact us</li>
+          <li>
+            <a href="#about">About us</a>
+          </li>
+          <li>
+            <a href="#contact"> Contact us</a>
+          </li>
         </ul>
       </nav>
       <div className="header-section">
@@ -22,12 +26,12 @@ const Header = () => {
             <div className="static-txt">We can</div>
             <TypeAnimation
               className="dynamic-txt"
-              speed={25}
+              speed={60}
               sequence={["build", 2000, "renovate", 2000, "innovate", 2000]}
               repeat={Infinity}
             />{" "}
           </div>
-          <button>Contact Us </button>
+          <button>Contact us</button>
         </div>
         <div className="images-show">
           <Image className="image image-1" src={image1} />

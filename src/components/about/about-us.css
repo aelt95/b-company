@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .building-svg {
   justify-self: center;
   width: 80%;
@@ -15,6 +16,16 @@
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 40px;
+  position: relative;
+}
+.content-title::after {
+  position: absolute;
+  content: "";
+  top: 90%;
+  left: 50%;
+  z-index: -1;
+  box-shadow: 0 0 400px 200px #223127, 0 0 200px 100px #226f54,
+    0 0 100px 50px #52ce7b;
 }
 .content-title span {
   color: #db324d;
@@ -36,5 +47,9 @@
   }
   .content-text {
     font-size: 18px;
+  }
+  .content-title::after {
+    box-shadow: 0 0 400px 200px #2231271e, 0 0 200px 100px #226f548f,
+      0 0 100px 50px #52ce7bc1;
   }
 }

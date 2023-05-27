@@ -1,8 +1,18 @@
 .contact-us-section {
-  display: flex;
   height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact-wraper {
+  display: flex;
+  height: 80%;
+  width: 100%;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(#db324d21, black);
+  border-radius: 8px;
 }
 
 .contact-us-title {
@@ -13,17 +23,24 @@
 .contact-us-title span {
   color: #db324d;
 }
-.contact-img {
-  height: 80%;
-}
 .contact-us-left {
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: right;
   align-items: center;
 }
-
+.contact-us-right {
+  height: 70%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-img {
+  height: 100%;
+  max-height: 400px;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -31,25 +48,34 @@ form {
   align-items: center;
   gap: 20px;
   width: 90%;
+  max-width: 800px;
 }
 form input {
   border: none;
   outline: none;
+  color: #fff;
   width: 100%;
-  padding: 4px 8px;
+  padding: 8px;
   border-radius: 8px;
   background-color: rgb(219, 50, 77, 0.2);
 }
+form input:focus {
+  background-color: rgb(219, 50, 77, 0.8);
+}
 form textarea {
   background-color: rgb(219, 50, 77, 0.2);
+  color: #fff;
   width: 100%;
   height: 150px;
-  padding: 4px 8px;
-  resize: vertical;
+  padding: 8px;
+  resize: none;
   border: none;
   font-family: inherit;
   outline: none;
   border-radius: 8px;
+}
+form textarea:focus {
+  background-color: rgb(219, 50, 77, 0.6);
 }
 form button {
   border: none;
@@ -65,4 +91,27 @@ form button {
 
 form button:hover {
   background-color: #a29c9b66;
+}
+
+@media (max-width: 1100px) {
+  .contact-us-right {
+    display: none;
+  }
+  .contact-us-left {
+    width: 100%;
+  }
+  form textarea {
+    height: 250px;
+  }
+}
+
+/* Footer */
+.footer-grid {
+  border-top: 1px solid #db324d33;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
