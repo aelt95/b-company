@@ -5,9 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  padding: 0 2rem;
-}
 header {
   /* position: relative; */
   display: flex;
@@ -34,7 +31,7 @@ header {
   list-style: none;
   gap: 2rem;
 }
-a::before {
+.nav-a::before {
   content: "";
   width: 100%;
   height: 2px;
@@ -44,7 +41,7 @@ a::before {
   left: -100%;
   transition: 0.3s;
 }
-a:hover:before {
+.nav-a:hover:before {
   left: 0%;
 }
 .nav-bar li {

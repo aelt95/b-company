@@ -25,25 +25,6 @@ const ContactUs = () => {
           <Image src={contactUsImg} className="contact-img" />
         </div>
       </div>
-      <footer>
-        <div className="footer-grid">
-          <div className="footer-info-col">
-            <span>SOLIDUS</span>
-            <ul>
-              <li>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-              </li>
-              <li>
-                <a href=""></a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-contact-col">Contact information here</div>
-        </div>
-      </footer>
     </section>
   );
 };

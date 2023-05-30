@@ -104,14 +104,3 @@ form button:hover {
     height: 250px;
   }
 }
-
-/* Footer */
-.footer-grid {
-  border-top: 1px solid #db324d33;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}

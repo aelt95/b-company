@@ -12,10 +12,15 @@ const Header = () => {
         <span>SOLIDUS</span>
         <ul>
           <li>
-            <a href="#about">About us</a>
+            <a className="nav-a" href="#about">
+              About us
+            </a>
           </li>
           <li>
-            <a href="#contact"> Contact us</a>
+            <a className="nav-a" href="#contact">
+              {" "}
+              Contact us
+            </a>
           </li>
         </ul>
       </nav>
