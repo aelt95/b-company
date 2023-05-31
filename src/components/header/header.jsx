@@ -1,4 +1,3 @@
-"use client";
 import styles from "./header.css";
 import Image from "next/image";
 import image1 from "../../../public/construction1-unsplash.jpg";
