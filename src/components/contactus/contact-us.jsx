@@ -1,14 +1,32 @@
-"use client";
+import { useRef, useEffect, useState } from "react";
 import styles from "./contact-us.css";
 import Image from "next/image";
 import contactUsImg from "../../../public/contactus.svg";
 const ContactUs = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
     return alert("Message sended");
   };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsVisible(entry.isIntersecting);
+      },
+      { root: null, threshold: 0, rootMargin: "-40px" }
+    );
+    observer.observe(ref.current);
+  }, []);
   return (
-    <section className="contact-us-section" id="contact">
+    <section
+      ref={ref}
+      className={
+        isVisible ? "animate-section contact-us-section" : "contact-us-section"
+      }
+      id="contact"
+    >
       <div className="contact-wraper">
         <div className="contact-us-left">
           <div className="contact-us-title">

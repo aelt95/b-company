@@ -1,10 +1,26 @@
+import { useRef, useEffect, useState } from "react";
 import styles from "./location.css";
 import Image from "next/image";
 import locationImg from "../../../public/location.svg";
 
 const Location = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsVisible(entry.isIntersecting);
+      },
+      { root: null, threshold: 0, rootMargin: "-40px" }
+    );
+    observer.observe(ref.current);
+  }, []);
   return (
-    <section className="location">
+    <section
+      ref={ref}
+      className={isVisible ? "animate-section location" : "location"}
+    >
       <div className="location-information">
         <div>
           Where are we <span>located</span>

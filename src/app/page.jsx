@@ -1,4 +1,4 @@
-// import Header from "../components/header.jsx";
+"use client";
 import Header from "@/components/header/header.jsx";
 import AboutUs from "@/components/about/about-us";
 import Services from "@/components/services/services";

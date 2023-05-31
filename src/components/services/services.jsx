@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./services.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,8 +10,25 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Services = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsVisible(entry.isIntersecting);
+      },
+      { root: null, threshold: 0, rootMargin: "-40px" }
+    );
+    observer.observe(ref.current);
+  }, []);
   return (
-    <section className="services-section">
+    <section
+      ref={ref}
+      className={
+        isVisible ? "animate-section services-section" : "services-section"
+      }
+    >
       <div className="services-title">
         What we can <span>offer</span>
       </div>

@@ -1,10 +1,27 @@
+import { useRef, useEffect, useState } from "react";
 import styles from "./about-us.css";
 import building from "../../../public/building.svg";
 import Image from "next/image";
 
 const AboutUs = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsVisible(entry.isIntersecting);
+      },
+      { root: null, threshold: 0, rootMargin: "-40px" }
+    );
+    observer.observe(ref.current);
+  }, []);
   return (
-    <section className="about-us" id="about">
+    <section
+      ref={ref}
+      className={isVisible ? "animate-section about-us" : "about-us"}
+      id="about"
+    >
       <Image className="building-svg" src={building} />
       <div className="content">
         <div className="content-title">
